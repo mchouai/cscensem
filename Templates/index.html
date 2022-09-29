@@ -1,0 +1,169 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSC</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="{%static 'css/form.css'%}">
+  </head>
+  <body>
+    <header>
+
+    </header>
+    <div class="testbox">
+    <form class="" method="post">
+      {% csrf_token %}
+  <div class="banner">
+    <h1>Rejoignez nous </h1>
+    </div>
+    <br/>
+    <fieldset>
+      <legend>Information personnelles : </legend>
+      <div class="colums">
+        <div class="item">
+      <label for="nom">Nom : <span>*</span></label>
+      <input type="text" name="nom" value="" required><br>
+</div>
+<div class="item">
+      <label for="prenom">Prénom : <span>*</span></label>
+      <input type="text" name="prenom" value="" required>
+</div>
+<div class="item">
+      <label for="mail">Adresse mail : <span>*</span></label>
+      <input type="email" name="mail" value="" required>
+</div>
+<div class="item">
+      <label for="wtsp">Téléphone : <span>*</span></label>
+      <input type="tel" name="wtsp" value="" required>
+</div>
+</div>
+</fieldset>
+<br>
+<fieldset>
+<legend>Informaton de formation : </legend>
+<p>Formation à l'ENSEM : </p>
+<div class="colums">
+ <div class="item">
+      <label for="niveau">Niveau : </label>
+  <select name="niveau" id="niveau">
+    <option value="1">Première année </option>
+    <option value="2">Deuxième année </option>
+    <option value="3">Troisième année </option>
+</select>
+</div>
+<div class="item">
+      <label for="filiere">Filière :</label>
+      <select name="filiere" id="filiere">
+        <option value="GLD">GLD </option>
+        <option value="GIRBD">GIRBD </option>
+        <option value="AII">AII</option>
+        <option value="CAPI">CAPI</option>
+        <option value="GESET">GESET</option>
+        <option value="GSE">GSE </option>
+        <option value="GSM">GSM </option>
+        <option value="CMPI">CMPI </option>
+        <option value="QMSI">QMSI </option>
+        <option value="PIP">PIP </option>
+        <option value="GIL">GIL </option>
+</select>
+</div>
+</div>
+
+<p>Formation avant d'intégrer l'ENSEM : </p>
+<div class="colums">
+<div class="item">
+
+      <label for="for_av_eta">Etablissement : </label>
+      <input type="text" name="for_av_eta" list="for_av_eta">
+    <datalist id="for_av_eta">
+    <option value="CPGE">
+    <option value="FST">
+    <option value="EST">
+    <option value="FS">
+
+  </datalist>
+</div>
+<div class="item">
+      <label for="for_av_fil">Filière : </label>
+      <input type="text" name="for_av_fil" value="">
+</div>
+</div>
+</fieldset>
+<br>
+<fieldset>
+<legend>Centres d'intêrets : </legend>
+
+<div class="item">
+      <label for="interet_domaine">Quelle est votre domaine de IT préféré ?</label>
+      <input type="text" name="interet_domaine" value="" list="interet_domaine">
+      <datalist id="interet_domaine">
+      <option value="Cybersecurity">
+      <option value="Web/Moble development">
+      <option value="DATA Science">
+      <option value="Networking">
+
+    </datalist>
+
+</div>
+
+<div class="item">
+      <label for="interet_prolang">Votre langage de programmation préféré ?</label>
+      <input type="text" name="interet_prolang" value="" list="interet_prolang">
+
+      <datalist id="interet_prolang">
+      <option value="Python">
+      <option value="JAVA">
+      <option value="C/C++">
+      <option value="Ruby">
+      <option value="Dart">
+      <option value="R">
+      <option value="Go">
+      <option value="Scala">
+
+    </datalist>
+
+</div>
+<div class="item">
+      <label for="parti_comp_info">Avez vous déjà participez en une compétition de programmation ?</label>
+      <select name="parti_comp_info">
+<option value="1">Oui</option>
+<option value="0">Non</option>
+</select>
+    </div>
+    <div class="item">
+      <label for="parti_comp_math">Avez vous déjà participé aux olympiades de mathématiques ?</label>
+           <select name="parti_comp_math">
+      <option value="1">Oui</option>
+      <option value="0">Non</option>
+      </select>
+  </div>
+</fieldset>
+<br>
+<fieldset>
+<legend>Motivation : </legend>
+<div class="item">
+      <label for="motivation">Quelle est votre motivation pour rejoindre le club ?</label>
+      <textarea id="motivation" name="motivation" rows="3"></textarea>
+</div>
+<div class="item">
+      <label for="message">Si vous avez un message ou une remarque, merci de l'écrire ci-dessous.</label>
+    <textarea id="message" name="message" rows="3"></textarea>
+<div class="">
+</fieldset>
+<div class="btn-block">
+<button type="submit">Enregistrer</button>
+</div>
+    </form>
+</div>
+  </body>
+  <footer>
+    <div  style="margin-bottom:5;text-align:center;">
+      made with &#128420 for the CS Club at ENSEM <br>
+      mohamed chouai <br>
+      &copy 2022
+    </div>
+
+  </footer>
+</html>
