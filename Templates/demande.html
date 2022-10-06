@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Demande N°: {{demande.id}}</title>
+    <style media="screen">
+.prec{
+  text-align:  left;
+}
+.suiv{
+  text-align:right;
+}
+.tous{
+  text-align:center;
+}
+      table{
+        align:center;
+        border-collapse: collapse;
+        font-size: 20px;
+        width:800px
+      }
+      td{
+        border: solid 1px;
+        text-align: left;
+        height: 50px;
+      }
+
+      th{
+
+        border: solid 1px;
+        text-align: center;
+        background-color: #f2f2f2;
+
+        width:200px;
+      }
+      h3,h5{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="st1">
+<h5>{{demande.date_demande}}</h5>
+
+    <h3>Demande N°:{{demande.id}}</h3>
+
+<table align="center">
+<tr>
+  <th>Nom et prénom :</th><td>{{demande.nom}} {{demande.prenom}}</td>
+</tr>
+<tr>
+  <th>Email : </th><td>{{demande.mail}}</td>
+</tr>
+<tr>
+  <th>Telephone : </th><td>{{demande.wtsp}}</td>
+</tr>
+<tr>
+    <th>Niveau :</th><td>{{demande.niveau}} A</td>
+</tr>
+<tr>
+    <th>Filière :</th><td>{{demande.filiere}}</td>
+</tr>
+<tr>
+    <th>Formation avant :</th><td>{{demande.for_av_eta}} , {{demande.for_av_fil}}</td>
+</tr>
+<tr>
+    <th>Domaine : </th> <td>{{demande.interet_domaine}}</td>
+</tr>
+<tr>
+  <th>Langage : </th><td>{{demande.interet_prolang}}</td>
+</tr>
+<tr>
+  <th>Motivation : </th><td>{{demande.motivation}}</td>
+</tr>
+<tr>
+  <th>Message :</th><td>{{demande.message}}</td>
+</tr>
+</table>
+<div class="prec">
+  <a href="{%url 'demande' precedent.id%}">précédent</a>
+</div>
+<div class="suiv">
+  <a href="{%url 'demande' suivant.id%}">suivant</a>
+</div>
+<div class="tous">
+  <a href="{%url 'main'%}">Tous</a>
+
+</div>
+  </body>
+</html>

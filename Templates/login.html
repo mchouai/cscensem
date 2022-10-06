@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>Se connecter</h3>
+    <form class=""  method="post">
+      {% csrf_token %}
+      <label for="username">Nom d'utilisateur : </label>
+      <input type="text" name="username" value=""> <br><br>
+      <label for="password">mot de passe :</label>
+      <input type="password" name="password" value=""><br><br>
+      <input type="submit" name="" value="Envoyer">
+
+    </form>
+  </body>
+</html>
