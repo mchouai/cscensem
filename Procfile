@@ -1,1 +1,1 @@
-web: gunicorn recrutement.wsgi  --log-file-
+web: gunicorn recrutement.wsgi  --log-file -
