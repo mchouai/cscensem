@@ -35,8 +35,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 height: inherit;
-padding-left: 400px;
-padding-right: 400px;
+padding-left: 25%;
+padding-right: 25%;
 margin-top: 40px;
 padding-bottom: 60px;
 }
