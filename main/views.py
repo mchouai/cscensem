@@ -3,6 +3,8 @@ from .models import Demande
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 
+from django.contrib import messages
+
 def loginpage(request):
     if request.method=="POST":
         username=request.POST.get('username')

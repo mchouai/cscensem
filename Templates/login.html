@@ -5,6 +5,9 @@
     <title></title>
   </head>
   <body>
+    {%for message in messages%}
+    {{message}}
+    {%endfor%}
     <h3>Se connecter</h3>
     <form class=""  method="post">
       {% csrf_token %}
