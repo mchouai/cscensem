@@ -16,3 +16,4 @@ six==1.14.0
 sqlparse==0.4.3
 urllib3==1.25.8
 whitenoise==6.2.0
+psycopg2==2.9.5
