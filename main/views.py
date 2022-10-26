@@ -42,5 +42,8 @@ def demandes(request,id):
     demande=Demande.objects.get(pk=id)
     precedent=demandes[demandes.index(demande)-1]
     suivant=demandes[(demandes.index(demande)+1)%len(demandes)]
+    if request.method=="POST":
+        demande.delete()
+        return redirect("main")
     content={"demande":demande,"precedent":precedent,"suivant":suivant}
     return render(request,"demande.html",content)

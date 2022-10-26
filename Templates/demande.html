@@ -86,5 +86,9 @@
   <a href="{%url 'main'%}">Tous</a>
 
 </div>
+<form class=""  method="post">
+    {% csrf_token %}
+  <input type="submit" name="supp" value="Suprimer">
+</form>
   </body>
 </html>
