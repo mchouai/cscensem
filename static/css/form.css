@@ -50,7 +50,7 @@ box-shadow: 0 0 8px #006622;
 .banner {
 position: relative;
 height: 250px;
-background-image: url("../img/img1.jpg");
+background-image: url("../img/banner.jpg");
 background-size: cover;
 display: flex;
 justify-content: center;
