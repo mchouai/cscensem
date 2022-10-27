@@ -5,7 +5,7 @@
     <title>Tous les demandes</title>
   </head>
   <body>
-    <h4>Nombres des demandes reçu : {{n}}</h4>
+    <h4>Nombre des demandes reçu : {{n}}</h4>
     {%for d in demandes%}
     <br>
     <a href="{%url 'demande' d.id %}">Demande N°: {{d.id}}</a>
